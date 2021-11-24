@@ -92,6 +92,7 @@ var testFlags = map[string]interface{}{
 	RequireApprovalFlag:        true,
 	RequireMergeableFlag:       true,
 	SilenceNoProjectsFlag:      false,
+	SilenceVCSStatusNoProjects: false,
 	SilenceForkPRErrorsFlag:    true,
 	SilenceAllowlistErrorsFlag: true,
 	SilenceVCSStatusNoPlans:    true,

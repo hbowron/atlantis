@@ -558,13 +558,19 @@ Values are chosen in this order:
   `--silence-no-projects` will tell Atlantis to ignore PRs if none of the modified files are part of a project defined in the `atlantis.yaml` file.
 
   This is useful when running multiple Atlantis servers against a single repository so you can
-  delegate work to each Atlantis server. Also useful when used with pre_workflow_hooks to dynamically generate an `atlantis.yaml` file.
+  delegate work to each Atlantis server. Also useful when used with pre_workflow_hooks to dynamically generate an `atlantis.yaml` file. Consider also setting `--silence-vcs-status-no-projects`.
+
+* ### `--silence-vcs-status-no-projects`
+  ```bash
+  atlantis server --silence-vcs-status-no-projects
+  ```
+  `--silence-vcs-status-no-projects` will tell Atlantis to ignore setting VCS status if none of the modified files are part of a project defined in the `atlantis.yaml` file.
 
 * ### `--silence-vcs-status-no-plans`
   ```bash
   atlantis server --silence-vcs-status-no-plans
   ```
-  `--silence-vcs-status-no-plans` will tell Atlantis to ignore setting VCS status if none of the modified files are part of a project defined in the `atlantis.yaml` file.
+  `--silence-vcs-status-no-plans` will tell Atlantis to ignore setting VCS status if no plans are found.
 
 * ### `--skip-clone-no-changes`
   ```bash

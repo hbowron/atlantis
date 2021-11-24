@@ -89,6 +89,7 @@ const (
 	RequireApprovalFlag        = "require-approval"
 	RequireMergeableFlag       = "require-mergeable"
 	SilenceNoProjectsFlag      = "silence-no-projects"
+	SilenceVCSStatusNoProjects = "silence-vcs-status-no-projects"
 	SilenceForkPRErrorsFlag    = "silence-fork-pr-errors"
 	SilenceVCSStatusNoPlans    = "silence-vcs-status-no-plans"
 	SilenceAllowlistErrorsFlag = "silence-allowlist-errors"
@@ -366,7 +367,11 @@ var boolFlags = map[string]boolFlag{
 		hidden:       true,
 	},
 	SilenceNoProjectsFlag: {
-		description:  "Silences Atlants from responding to PRs when it finds no projects.",
+		description:  "Silences Atlantis from responding to PRs when it finds no projects.",
+		defaultValue: false,
+	},
+	SilenceVCSStatusNoProjects: {
+		description:  "Silences VCS commit status when Atlantis finds no projects.",
 		defaultValue: false,
 	},
 	SilenceForkPRErrorsFlag: {
